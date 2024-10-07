@@ -1,14 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const RenderTodos = () => {
+const RenderTodos = ({todoList}) => {
+  const Item = ({ todo }) => {
+    return (
+      <View>
+        <Text>{todo.item}</Text>
+      </View>
+    );
+  }
+
   return (
     <View>
-      <Text>RenderTodos</Text>
+      <FlatList
+        data={todoList}
+        renderItem={({item}) => <Item todo={item} />}
+      />
     </View>
-  )
+  );
 }
 
-export default RenderTodos
+export default RenderTodos;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
