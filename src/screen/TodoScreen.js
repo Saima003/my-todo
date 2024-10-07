@@ -22,11 +22,11 @@ const TodoScreen = () => {
       <TextInput style={{
         borderWidth: 2, borderColor: "#1e90ff", borderRadius: 6, paddingVertical: 6,
         paddingHorizontal: 16,
-      }} placeholder="Add a Task" value={todo} onChangeText={text => setTodo(text)} />
+      }} placeholder="Add a Task" value={todo} onChangeText={text => setTodo(text)}/>
       <TouchableOpacity style={{ backgroundColor: "#000", borderRadius: 6, marginVertical: 16, paddingVertical: 12, justifyContent: "center" }} onPress={e => addHandler()}>
         <Text style={{ color: "white", fontSize: 16, textAlign: 'center' }}>Add</Text>
       </TouchableOpacity>
-      <RenderTodos todoList={todoList} setTodoList={setTodoList}/>
+      <RenderTodos todoList={todoList} setTodoList={setTodoList} setTodo={setTodo}/>
     </View>
   )
 }
