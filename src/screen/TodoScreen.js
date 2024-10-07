@@ -26,7 +26,7 @@ const TodoScreen = () => {
       <TouchableOpacity style={{ backgroundColor: "#000", borderRadius: 6, marginVertical: 16, paddingVertical: 12, justifyContent: "center" }} onPress={e => addHandler()}>
         <Text style={{ color: "white", fontSize: 16, textAlign: 'center' }}>Add</Text>
       </TouchableOpacity>
-      <RenderTodos todoList={todoList}/>
+      <RenderTodos todoList={todoList} setTodoList={setTodoList}/>
     </View>
   )
 }
